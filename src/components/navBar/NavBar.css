@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    background-color: #200d6b;
+    justify-content: space-around;
+}
+.img__logo{
+    text-align: start;
+}
+.navbar__header{
+    display: flex;
+    margin-top: 1rem;
+}
+.lista__header{
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.itemList__header{
+    color: #ffff;
+}
+
+.linkNavbar__header{
+    text-decoration: none;
+}
+@media screen {
+    
+}
