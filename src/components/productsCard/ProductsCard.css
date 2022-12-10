@@ -1,0 +1,23 @@
+.card__div{
+    width: 350px;
+    text-align: center;
+}
+.flex__div{
+    display: flex;
+    margin: 25px 15px;
+    justify-content: space-around;
+}
+.title__car{
+    font-size: larger;
+}
+.description__car{
+    font-size: medium;
+}
+.car__price{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
