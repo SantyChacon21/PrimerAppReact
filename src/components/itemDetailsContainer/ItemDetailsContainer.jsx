@@ -11,9 +11,6 @@ const ItemDetailsContainer = () => {
     console.log(id)
 
     useEffect(()=>{
-
-        
-
         const productSeleccionado = products.find( producto => producto.id === parseInt(id))
         setProduct(productSeleccionado)
     }, [id])
