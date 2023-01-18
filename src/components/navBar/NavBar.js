@@ -5,6 +5,7 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 export const NavBar = () =>{
+
     return(
         <header className="header">
             <Link to='/'>
@@ -26,8 +27,7 @@ export const NavBar = () =>{
                     <Link to={`/category/6`}><NavDropdown.Item className='' href="./">Sale</NavDropdown.Item></Link>
                     </NavDropdown>
                     <a href='/' className='link'><li className='itemList__header'>Nosotros</li></a>
-                    <CartWidget/>
-                    
+                    <CartWidget/> 
                 </ul>
             </nav>
 
