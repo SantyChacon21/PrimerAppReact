@@ -13,8 +13,6 @@ const Cart = () => {
 
     const [orderId, setOrderId] = useState (null)
 
-    console.log(orderId )
-
     if(orderId){
       return<div>
         <h1>Su numero de orden es: {orderId}</h1>
@@ -30,8 +28,8 @@ const Cart = () => {
       <div className='cart-box'>
         {
           cart.map(item=>(
-            <div>
-              <h2 key={item.id}>{item.name}</h2>
+            <div key={item.id}>
+              <h2>{item.name}</h2>
               <img src={item.img} alt="" />
               <p>Usted quiere comprar: {item.quantity} {item.name}</p>
               <p>El precio por unidad es {item.price}</p>

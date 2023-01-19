@@ -6,7 +6,7 @@ import { db } from '../../firebaseConfig'
 
 const Form = ( {cart, getTotalPriceCart,setOrderId, clearCart} ) => {
 
-  const [userData, setUserData] = useState({name:"", lastName:""})
+  const [userData, setUserData] = useState ({name:"", lastName:"", email:""})
 
   const total = getTotalPriceCart()
 
@@ -24,9 +24,9 @@ const Form = ( {cart, getTotalPriceCart,setOrderId, clearCart} ) => {
     const orderCollection = collection (db, "orders")
     addDoc(orderCollection, order)
     .then(res=> setOrderId(res.id))
-    
+
     cart.map(product=>{
-      updateDoc(doc(db,"products",product.id),{stock: product.stock - product.quantity})
+      return (updateDoc(doc(db,"products",product.id),{stock: product.stock - product.quantity}))
     })
 
     clearCart()

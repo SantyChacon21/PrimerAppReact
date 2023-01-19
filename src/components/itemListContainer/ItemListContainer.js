@@ -29,7 +29,6 @@ const ItemListContainer = () => {
       }
     })
     setItem(products)
-    console.log(q)
   })
   .catch((err)=>console.log(err))
   }else{
