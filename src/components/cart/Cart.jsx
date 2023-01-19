@@ -3,6 +3,7 @@ import {useContext} from 'react'
 import { CartContext } from '../../context/CartContext'
 import './Cart.css';
 import Form from '../form/Form';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -10,11 +11,21 @@ const Cart = () => {
 
     const [buy, setBuy] = useState (false)
 
+    const [orderId, setOrderId] = useState (null)
+
+    console.log(orderId )
+
+    if(orderId){
+      return<div>
+        <h1>Su numero de orden es: {orderId}</h1>
+        <Link to={"/"}>Volver A Comprar</Link>
+      </div>
+    }
+
     if (cart.length < 1) {
       return <h2>No hay Objetos en el Carrito</h2>
     } else {
   return (
-
     <div>
       <div className='cart-box'>
         {
@@ -32,7 +43,7 @@ const Cart = () => {
       </div>
       <h3>Precio total por todo es: {getTotalPriceCart()}</h3>
       {
-        buy? (<Form/>
+        buy? (<Form cart={cart} getTotalPriceCart={getTotalPriceCart} setOrderId={setOrderId} clearCart={clearCart}/>
         ):(
           <div>
           <button onClick={()=>setBuy(true)}>Comprar</button>
